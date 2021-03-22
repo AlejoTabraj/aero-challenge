@@ -1,7 +1,6 @@
 import  styled  from 'styled-components'
 
-const Nav = styled.nav`
-border: 1px solid red;
+export const Nav = styled.nav`
 padding: 1%;
 display: flex;
 justify-content: space-between;
@@ -9,4 +8,3 @@ justify-content: space-between;
 
 
 
-export default Nav;

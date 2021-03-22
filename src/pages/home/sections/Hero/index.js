@@ -1,8 +1,8 @@
 import React from 'react'
 import banner from '../../../../mock/images/header-v3.png'
-import { Img, SecondaryTitle, BannerContainer } from './styledBanner'
+import { Img, SecondaryTitle, BannerContainer } from './styledHero'
 
-export const Banner = () => {
+const Hero = () => {
     return (
         <BannerContainer>
             <Img src={banner} alt='auricilares de color celeste'></Img>
@@ -10,3 +10,5 @@ export const Banner = () => {
         </BannerContainer>
     )
 }
+
+export default Hero;

@@ -1,11 +1,13 @@
-import { Home } from "./pages/Home";
+import ContextProvider from "./context/globalContext";
+import Pages from "./pages";
 
 function App() {
   return (
+    <ContextProvider>
     <div className="App">
-        <Home />
-        Hi from App component
+        <Pages />
     </div>
+    </ContextProvider>
   );
 }
 
