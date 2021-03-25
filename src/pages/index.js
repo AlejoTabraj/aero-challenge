@@ -5,7 +5,6 @@ const Pages = () => {
     return (
         <div>
             <Home />
-            lolo
         </div>
     )
 }

@@ -8,7 +8,7 @@ const Pagination = ({ pageState, setPageState }) => {
 
   const handleOnClick = e => {
     e.preventDefault();
-    const target = e.target.value;
+    const target = e.target.alt;
     if (sectionNumber >= 3 || sectionNumber < 1) {
       setPageState({ ...pageState, sectionNumber: 1 });
     } else {
@@ -30,10 +30,10 @@ const Pagination = ({ pageState, setPageState }) => {
   return (
     <PaginationWrapper>
       <ArrowButton onClick={handleOnClick} value="prevButton">
-          <ArrowImage src={ArrowLeft}></ArrowImage>
+          <ArrowImage src={ArrowLeft} alt='prevButton'></ArrowImage>
       </ArrowButton>
       <ArrowButton onClick={handleOnClick} value="nextButton">
-          <ArrowImage src={ArrowRight}></ArrowImage>
+          <ArrowImage value="nextButton" src={ArrowRight} alt='nextButton'></ArrowImage>
       </ArrowButton>
     </PaginationWrapper>
   );
