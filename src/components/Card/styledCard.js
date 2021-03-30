@@ -1,5 +1,12 @@
 import styled from 'styled-components'
 
+
+
+
+export const CardWrapper =styled.div`
+    position: relative;
+    margin-bottom: 0.5rem;
+`
 export const CardContainer = styled.div`
     width: 20vw;
     height: 20vw;
@@ -8,6 +15,11 @@ export const CardContainer = styled.div`
     
     &:hover {
 	    box-shadow: 4px 4px 8px black;
+    }
+
+    @media (max-width: 520px){
+        width: 84vw;
+        height: 84vw;
     }
 `
 
@@ -57,10 +69,14 @@ export const ProductImage = styled.img`
     width: 90%;
 	height: auto;
 `
+
 export const DescriptionContainer = styled.div`
-   padding-top: 2%;
-   padding-bottom:2%;
-	padding-left: 10%;
+    padding-top: 2%;
+    padding-bottom:2%;
+    padding-left: 10%;
+
+    
+
 `
 export const DescriptionTag = styled.p`
     color: #a3a3a3;
@@ -76,4 +92,54 @@ export const DescriptionName = styled.h3`
 export const Line = styled.hr`
     width: 80%;
 	margin-left: 10%;
+`
+
+/*the redeem part bellow*/
+/*------------------*/
+
+export const RedeemContainer = styled.div`
+    display: none;
+    position: absolute;
+    top: -150%;
+    left: 0%;
+    background-image:linear-gradient(-180deg, #0ad4fa 0%, #25bbf1 100%);
+    width: 100%; 
+    height: 250%;
+    flex-flow: row wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+`
+
+export const RedeemParagraph= styled.p`
+    font-size: 2.0vw;
+    display: flex;
+    align-items: center;
+`
+
+export const RedeemButton = styled.button`
+    border-radius: 100px;
+    background-color: #FFFFFF;
+    padding: 1vw 2vw;
+    font-size: 1.2rem;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+`
+
+/*---------------*/
+
+
+export const SectionDisplay = styled.div`
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    top: 60%;
+
+    &:hover ${RedeemContainer}{
+        display: flex;
+        cursor: pointer;
+    }
 `
