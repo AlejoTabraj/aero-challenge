@@ -17,6 +17,7 @@ const ProductsSection = () => {
   useEffect(() => {
     getProductsReducer()
       .then(data => {
+          console.log(data)
         dispatch(data);
       })
       .catch(error => {

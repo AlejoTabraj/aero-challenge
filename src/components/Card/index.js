@@ -4,7 +4,7 @@ import coin from '../../mock/icons/coin.svg'
 import { CardContainer, ImageContainer, CoinContainer, CoinParagraph, CoinImage, ProductImage, CoinBuyImage, Line, DescriptionContainer, DescriptionTag, DescriptionName, RedeemContainer, RedeemParagraph, RedeemButton, CardWrapper, SectionDisplay } from './styledCard'
 
 
-export const Card = ({category, cost, img, name, _id}) => {
+export const Card = ({category, cost, img, name, _id, handleSubmitRedeem}) => {
     
     return (
     <CardWrapper>
@@ -26,8 +26,8 @@ export const Card = ({category, cost, img, name, _id}) => {
     <SectionDisplay>
         
     <RedeemContainer>
-        <RedeemParagraph>12000 <img src={coin} alt='hola'></img></RedeemParagraph>
-        <RedeemButton>Redeem now</RedeemButton>
+        <RedeemParagraph>{cost} <img src={coin} alt='hola'></img></RedeemParagraph>
+        <RedeemButton id={_id} onClick={handleSubmitRedeem} value={cost}>Redeem now</RedeemButton>
     </RedeemContainer>
     </SectionDisplay>
     </CardWrapper>

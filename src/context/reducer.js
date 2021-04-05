@@ -5,6 +5,7 @@ export const initialState = {
 
 export const globalReducers = (state, action) => {
   const { type, payload } = action;
+  console.log('ooo', type,payload)
   switch (type) {
     case "SET_PRODUCTS":
       return {
@@ -15,6 +16,16 @@ export const globalReducers = (state, action) => {
       return {
         ...state,
         user: payload
+      };
+    case "SET_USER_POINTS":
+      return {
+        ...state,
+        user: {...state.user, points: +state.user.points + +payload}
+      };
+    case "SET_POINTS_AFTER_BUY":
+      return {
+        ...state,
+        user: {...state.user, points: +state.user.points - +payload}
       };
     default:
       return 0;

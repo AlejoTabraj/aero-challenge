@@ -1,8 +1,5 @@
 import styled from 'styled-components'
 
-
-
-
 export const CardWrapper =styled.div`
     position: relative;
     margin-bottom: 0.5rem;
@@ -35,7 +32,7 @@ export const CoinContainer = styled.div`
 `
 export const CoinParagraph = styled.p`
     color: white;
-	font-size: 1.1vw;
+	font-size: 1.4rem;
 `
 export const CoinImage = styled.img`
     margin-top: 2%;
@@ -113,7 +110,7 @@ export const RedeemContainer = styled.div`
 `
 
 export const RedeemParagraph= styled.p`
-    font-size: 2.0vw;
+    font-size: 1.8rem;
     display: flex;
     align-items: center;
 `
@@ -121,8 +118,8 @@ export const RedeemParagraph= styled.p`
 export const RedeemButton = styled.button`
     border-radius: 100px;
     background-color: #FFFFFF;
-    padding: 1vw 2vw;
-    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
     border: none;
     &:hover {
         cursor: pointer;

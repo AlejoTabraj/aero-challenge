@@ -3,8 +3,7 @@ import { UserCard } from '../../../../../components/UserCard'
 import { getUserReducer } from '../../../../../context/actions'
 import { SetGlobalContext, GlobalContext } from '../../../../../context/globalContext'
 
-
-export const User = () => {
+export const User = ({ closeOpenModal }) => {
     const dispatch = useContext(SetGlobalContext)
     const { user }  = useContext(GlobalContext)
 
@@ -21,9 +20,7 @@ export const User = () => {
     }, [])
 
     
-    return (
-        <div>
-            <UserCard {...user}/>
-        </div>
-    )
+    return (        
+            <UserCard {...user} btnCoinAction={closeOpenModal}/>
+        )
 }

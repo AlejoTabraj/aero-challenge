@@ -27,3 +27,11 @@ export const mayorPriceFirst = (products) => {
     })
     return {type: 'SET_PRODUCTS', payload: newOrder}
 };
+
+export const changePointsUser = (points) => {
+    return {type: 'SET_USER_POINTS', payload: points}
+}
+
+export const changePointsAfterBuy = (cost) => {
+    return {type: 'SET_POINTS_AFTER_BUY', payload: cost}
+}
